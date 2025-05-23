@@ -1,0 +1,164 @@
+.cardContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  perspective: 900px; /* Spostata qui per l'effetto 3D */
+}
+
+.card {
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  aspect-ratio: 4/5; /* Per card più lunghe che larghe */
+  border-radius: 2.2rem;
+  position: relative;
+  overflow: hidden; /* Impedisce che il contenuto esca dalla card */
+}
+
+.cardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 0.9em 0.9em 1.6em 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: transform 0.66s cubic-bezier(.6,-0.01,.22,1.08);
+  border-radius: inherit;
+  box-sizing: border-box;
+  overflow: hidden; /* Contenuto non esce dalla faccia */
+}
+
+.front {
+  z-index: 3;
+  transform: rotateY(0deg);
+  background: linear-gradient(135deg, #fff 60%, #fbe8e4 100%);
+  justify-content: flex-end;
+}
+
+.back {
+  z-index: 2;
+  transform: rotateY(180deg);
+  background: linear-gradient(110deg, #fff 60%, #fbe8e4 100%);
+  justify-content: space-between;
+}
+
+.cardImage {
+  width: 74%;
+  height: auto;
+  max-height: 60%; /* Limitiamo l'altezza invece di usare vw */
+  object-fit: contain;
+  margin: 0.2em auto 0.2em auto;
+  display: block;
+  background: #fff9;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 10px #e4cfc8a5;
+  flex-shrink: 0; /* Impedisce che si riduca troppo */
+}
+
+.cardTitle {
+  font-size: clamp(1.13rem, 2vw, 1.3rem);
+  margin: 0.4em 0 0.9em 0;
+  font-weight: 700;
+  text-align: center;
+  color: #8B1737;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+
+.btn {
+  border-radius: 2em;
+  border: 2px solid #bababa;
+  background: #fff;
+  font-size: 1.11em;
+  font-weight: bold;
+  color: #781838;
+  padding: 0.67em 2.3em;
+  margin: 1.2em 0 0 0;
+  cursor: pointer;
+  box-shadow: 0 1px 6px #eee7e73d;
+  transition: background 0.15s, color 0.15s, border-color 0.13s;
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  background: #f6e4e0;
+  color: #6a1835;
+  border-color: #8B1737;
+}
+
+.backContent {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.01rem, 2vw, 1.15rem);
+  text-align: center;
+  color: #3c1624;
+  padding: 1.2em 0.7em;
+  overflow-y: auto; /* Se il testo è troppo lungo */
+}
+
+.backBtnWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Animazioni flip - come nel tuo CSS originale */
+.flipped .front { 
+  transform: rotateY(180deg);
+}
+
+.flipped .back { 
+  transform: rotateY(0deg);
+}
+@media (max-width: 1024px) {
+  .cardImage {
+    width: 70%;
+    max-height: 55%;
+  }
+}
+
+/* Responsive per mobile */
+@media (max-width: 640px) {
+  .cardContainer {
+    max-width: 90vw;
+    margin: 1rem auto;
+  }
+  
+  .card {
+    min-height: 400px;
+  }
+  
+  .cardImage {
+    width: 68%;
+    max-height: 50%;
+  }
+  
+  .cardFace {
+    padding: 1rem 1rem 1.4rem 1rem;
+  }
+  
+  .cardTitle {
+    font-size: 1.1rem;
+    margin: 0.3em 0 0.7em 0;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.8rem;
+    font-size: 1rem;
+  }
+  
+  .backContent {
+    font-size: 1rem;
+    padding: 1em 0.8em;
+  }
+}

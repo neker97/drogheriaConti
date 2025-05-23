@@ -1,0 +1,152 @@
+/* CAROUSEL WRAPPER */
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 4rem; /* Spazio per le frecce */
+  box-sizing: border-box;
+}
+
+/* CAROUSEL SCROLL CONTAINER */
+.carouselScroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(33.333% - 1rem); /* Desktop: 3 card */
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0;
+  align-items: stretch;
+}
+
+.carouselScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* CARD STYLING */
+.carouselScroll > * {
+  scroll-snap-align: start;
+  min-width: 0;
+  width: 100%;
+  height: auto;
+}
+
+/* TABLET: 2 card per volta */
+@media (max-width: 1024px) {
+  .carouselWrapper {
+    padding: 0 3rem;
+  }
+  
+  .carouselScroll {
+    grid-auto-columns: calc(50% - 0.75rem);
+    gap: 1.5rem;
+  }
+}
+
+/* MOBILE: 1 card per volta */
+@media (max-width: 640px) {
+  .carouselWrapper {
+    padding: 3rem 1rem 0 1rem;
+  }
+  
+  .carouselScroll {
+    grid-auto-columns: calc(100% - 0rem);
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* FRECCE */
+.arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 249, 246, 0.95);
+  border: 2px solid #8B1737;
+  border-radius: 50%;
+  color: #8B1737;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(139, 23, 55, 0.2);
+}
+
+.arrowBtn:hover {
+  background: rgba(230, 193, 202, 0.95);
+  color: #4B0D16;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.arrowBtn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.arrowLeft {
+  left: 0.5rem;
+}
+
+.arrowRight {
+  right: 0.5rem;
+}
+
+/* FRECCE SU MOBILE: SOPRA IL CAROSELLO */
+@media (max-width: 640px) {
+  .arrowBtn {
+    top: 1rem;
+    transform: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+  
+  .arrowBtn:hover {
+    transform: scale(1.05);
+  }
+  
+  .arrowBtn:active {
+    transform: scale(0.95);
+  }
+  
+  .arrowLeft {
+    left: calc(50% - 4rem);
+  }
+  
+  .arrowRight {
+    right: calc(50% - 4rem);
+  }
+}
+
+/* STATO ATTIVO DURANTE DRAG */
+.carouselScroll.active {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.carouselScroll:not(.active) {
+  cursor: grab;
+}
+
+/* SMOOTH TRANSITIONS */
+.carouselScroll > * {
+  transition: transform 0.2s ease;
+}
+
+.carouselScroll:hover > * {
+  transform: translateY(-2px);
+}
+
+.carouselScroll > *:hover {
+  transform: translateY(-4px);
+  z-index: 2;
+}

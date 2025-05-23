@@ -1,0 +1,81 @@
+{
+  "company": {
+    "name": "Drogheria Conti",
+    "logo": "/assets/images/logo.png"
+  },
+  "navigation": [
+    {
+      "name": "Prodotti",
+      "href": "product"
+    },
+    {
+      "name": "Dove siamo",
+      "href": "features"
+    },
+    {
+      "name": "Chi siamo",
+      "href": "about"
+    }
+  ],
+  "mainHero": {
+    "title": "Drogheria Conti",
+    "subtitle": "Eccellenze italiane dal 1930",
+    "description": "Benvenuti nella Drogheria Conti, il vostro punto di riferimento per prodotti biologici e specialità gastronomiche nel cuore di Roma. Da Alessandro e Sandra troverete qualità, passione e una selezione unica di cibi, vini, dolci, tè e molto altro. Vieni a scoprire la vera eccellenza italiana!",
+    "img": "/assets/images/happyTeam.jpeg"
+  },
+  "product": {
+    "title": "I nostri prodotti",
+    "subtitle": "Una selezione dei nostri prodotti",
+    "items": [
+      {
+        "title": "Prodotti biologici e a km 0",
+        "description": "Selezioniamo per voi solo prodotti biologici certificati, freschi e genuini, dal pane ai formaggi, dalla frutta ai salumi.",
+        "img": "/assets/images/prodotti-biologici.jpg"
+      },
+      {
+        "title": "Vini e distillati d'eccellenza",
+        "description": "Ampia selezione di vini italiani, liquori e distillati artigianali per accompagnare ogni occasione speciale.",
+        "img": "/assets/images/vini.jpg"
+      },
+      {
+        "title": "Tè, infusi e dolci artigianali",
+        "description": "Scoprite la nostra scelta di tè pregiati, tisane aromatiche, cioccolata e caramelle fatte a mano.",
+        "img": "/assets/images/infusi-dolci.jpg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Dove ci trovi",
+    "subtitle": "Nel cuore di Roma",
+    "description": "Ci trovi in Via dei Giubbonari 55, a due passi da Campo de' Fiori. Siamo facilmente raggiungibili sia a piedi che con i mezzi pubblici. Vieni a trovarci per vivere un'esperienza di gusto e tradizione autentica!",
+    "items": [
+      {
+        "name": "Indirizzo",
+        "description": "Via dei Giubbonari, 55 – 00186 Roma"
+      },
+      {
+        "name": "Orari di apertura",
+        "description": "Lunedì–Sabato: 9:00–20:00. Domenica chiuso."
+      }
+    ]
+  },
+  "about": {
+    "sections": [
+      {
+        "name": "Chi siamo",
+        "href": "#",
+        "content": "Drogheria Conti nasce dalla passione di Alessandro e Sandra per la buona tavola e la qualità. Da oltre 90 anni siamo un punto di riferimento a Roma per chi cerca prodotti genuini e un servizio accogliente e familiare."
+      },
+      {
+        "name": "Contatti",
+        "href": "#contatti",
+        "content": "Telefono: +39 06 1234567\nEmail: info@drogheriaconti.it"
+      }
+    ],
+    "socialMedia": {
+      "github": "https://github.com/issaafalkattan",
+      "twitter": "https://twitter.com/issaafkattan",
+      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+    }
+  }
+}

@@ -10,8 +10,8 @@ const Wave: FC = () => {
   const height = 600;
   let frequency = 0.013;
   const waves = {
-    frontWave: new WaveObj([0.0211, 0.028, 0.015], 'rgb(236, 71, 85, 0.1)'),
-    backWave: new WaveObj([0.0122, 0.018, 0.005], 'rgb(249, 168, 168, 0.1)'),
+    frontWave: new WaveObj([0.004, 0.006, 0.002], 'rgba(74, 222, 128, 0.22)'), // Verde acceso e più alto
+    backWave: new WaveObj([0.002, 0.003, 0.001], 'rgba(121, 85, 72, 0.14)'), // Marrone basso
   };
 
   const render = () => {

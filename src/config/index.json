@@ -27,9 +27,9 @@
     "href": "#"
   },
   "mainHero": {
-    "title": "Use me as your",
-    "subtitle": "landing page.",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.",
+    "title": "Drogheria Conti",
+    "subtitle": "Eccellenze italiane dal 1930",
+    "description": "Benvenuti nella drogheria di Alessandro e Sandra, un angolo di autentica tradizione italiana. Qui troverete solo il meglio: prodotti biologici selezionati con cura, eccellenze gastronomiche italiane, una vasta scelta di vini e superalcolici ricercati, oltre a specialità fresche di stagione. Non mancano infusi profumati, tè pregiati da tutto il mondo e un irresistibile assortimento di cioccolata e caramelle artigianali. Passione, qualità e accoglienza familiare vi aspettano ogni giorno.",
     "img": "/assets/images/happyTeam.jpeg",
     "primaryAction": {
       "text": "Get started",

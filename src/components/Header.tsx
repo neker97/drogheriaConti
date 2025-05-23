@@ -4,11 +4,19 @@ import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Link } from 'react-scroll';
 
-import config from '../config/index.json';
+import { useLanguage } from '../utils/LanguageContext';
 
 const Menu = () => {
-  const { navigation, company, callToAction } = config;
+  const { config, lang, setLang } = useLanguage();
+
+  const { navigation, company } = config;
   const { name: companyName, logo } = company;
+
+  const flagSrc =
+    lang === 'it' ? '/assets/images/ita.png' : '/assets/images/eng.png';
+  const altFlag = lang === 'it' ? 'Cambia in inglese' : 'Switch to Italian';
+
+  const toggleLang = () => setLang(lang === 'it' ? 'en' : 'it');
 
   return (
     <>
@@ -28,12 +36,34 @@ const Menu = () => {
             className="relative flex items-center justify-between sm:h-10 lg:justify-start"
             aria-label="Global"
           >
+            <button
+              onClick={toggleLang}
+              style={{
+                width: 56,
+                height: 56,
+                padding: 0,
+              }}
+              title={altFlag}
+            >
+              <img
+                src={flagSrc}
+                alt={lang === 'it' ? 'Bandiera Italia' : 'UK Flag'}
+                style={{
+                  width: 36,
+                  height: 36,
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  boxShadow: '0 1px 4px rgba(0,0,0,0.12)',
+                }}
+              />
+            </button>
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="#">
                   <span className="sr-only">{companyName}</span>
                   <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} />
                 </a>
+                {/* Bottone sferico, padding destra */}
                 <div className="-mr-2 flex items-center md:hidden">
                   <Popover.Button
                     className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
@@ -112,12 +142,12 @@ const Menu = () => {
                   </Link>
                 ))}
               </div>
-              <a
+              {/* <a
                 href={callToAction.href}
                 className={`block w-full px-5 py-3 text-center font-medium text-primary bg-gray-50 hover:bg-gray-100`}
               >
                 {callToAction.text}
-              </a>
+              </a> */}
             </div>
           </Popover.Panel>
         </Transition>

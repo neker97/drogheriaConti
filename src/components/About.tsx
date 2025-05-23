@@ -1,8 +1,10 @@
 import React from 'react';
 
-import config from '../config/index.json';
+// import config from '../config/index.json';
+import { useLanguage } from '../utils/LanguageContext'; // 👈 importa il context
 
 const About = () => {
+  const { config } = useLanguage(); // 👈 prendi il config giusto per la lingua selezionata
   const { company, about } = config;
   const { logo, name: companyName } = company;
   const { socialMedia, sections } = about;
@@ -79,10 +81,7 @@ const About = () => {
         </div>
         <div className="flex items-center mt-6">
           <p className="mt-6 text-xs lg:text-sm leading-none text-gray-900 dark:text-gray-50">
-            &copy; {new Date().getFullYear()} designed by{' '}
-            <a href="https://github.com/issaafalkattan" rel="nofollow">
-              Issaaf Kattan
-            </a>
+            Federico Ribaldi
           </p>
         </div>
       </div>

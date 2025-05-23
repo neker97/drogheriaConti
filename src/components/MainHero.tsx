@@ -1,8 +1,10 @@
 import React from 'react';
 
-import config from '../config/index.json';
+// import config from '../config/index.json';
+import { useLanguage } from '../utils/LanguageContext'; // 👈 importa il context
 
 const MainHero = () => {
+  const { config } = useLanguage(); // 👈 prendi il config giusto per la lingua selezionata
   const { mainHero } = config;
   return (
     <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
@@ -16,6 +18,7 @@ const MainHero = () => {
         <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
           {mainHero.description}
         </p>
+        {/*
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow">
             <a
@@ -34,6 +37,7 @@ const MainHero = () => {
             </a>
           </div>
         </div>
+        */}
       </div>
     </main>
   );

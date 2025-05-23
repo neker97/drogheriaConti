@@ -1,0 +1,81 @@
+{
+  "company": {
+    "name": "Drogheria Conti",
+    "logo": "/assets/images/logo.png"
+  },
+  "navigation": [
+    {
+      "name": "Products",
+      "href": "product"
+    },
+    {
+      "name": "Where we are",
+      "href": "features"
+    },
+    {
+      "name": "About us",
+      "href": "about"
+    }
+  ],
+  "mainHero": {
+    "title": "Drogheria Conti",
+    "subtitle": "Italian excellence since 1930",
+    "description": "Welcome to Drogheria Conti, your reference point in Rome for organic products and gourmet specialties. Alessandro and Sandra await you with a unique selection of food, wines, sweets, teas and more. Discover the real taste of Italy, where passion, tradition and quality meet!",
+    "img": "/assets/images/happyTeam.jpeg"
+  },
+  "product": {
+    "title": "Our products",
+    "subtitle": "A selection of our products",
+    "items": [
+      {
+        "title": "Organic and local products",
+        "description": "We select only certified organic products for you, fresh and genuine: from bread to cheese, from fruit to cured meats.",
+        "img": "/assets/images/prodotti-biologici.jpg"
+      },
+      {
+        "title": "Fine wines and spirits",
+        "description": "A wide selection of Italian wines, craft liqueurs and spirits for your special occasions.",
+        "img": "/assets/images/vini.jpg"
+      },
+      {
+        "title": "Teas, herbal infusions and handmade sweets",
+        "description": "Discover our range of premium teas, aromatic herbal infusions, handmade chocolate and artisanal candies.",
+        "img": "/assets/images/infusi-dolci.jpg"
+      }
+    ]
+  },
+  "features": {
+    "title": "Where to find us",
+    "subtitle": "In the heart of Rome",
+    "description": "You can find us at Via dei Giubbonari 55, just steps from Campo de' Fiori. We are easily reachable on foot or by public transport. Come and enjoy a true Italian taste and tradition experience!",
+    "items": [
+      {
+        "name": "Address",
+        "description": "Via dei Giubbonari, 55 – 00186 Rome"
+      },
+      {
+        "name": "Opening hours",
+        "description": "Monday–Saturday: 9:00–20:00. Closed on Sundays."
+      }
+    ]
+  },
+  "about": {
+    "sections": [
+      {
+        "name": "About us",
+        "href": "#",
+        "content": "Drogheria Conti was born from the passion of Alessandro and Sandra for good food and genuine quality. For over 90 years, we have been a landmark in Rome for those who seek authentic products and a warm, welcoming service."
+      },
+      {
+        "name": "Contact",
+        "href": "#contact",
+        "content": "Phone: +39 06 1234567\nEmail: info@drogheriaconti.it"
+      }
+    ],
+    "socialMedia": {
+      "github": "https://github.com/issaafalkattan",
+      "twitter": "https://twitter.com/issaafkattan",
+      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+    }
+  }
+}

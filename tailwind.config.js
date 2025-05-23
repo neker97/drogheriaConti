@@ -17,11 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#ec4755',
-        secondary: '#a12c34',
-        tertiary: '#99a0a3',
-        border: '#1a2e35',
-        background: '#ffffff',
+        primary: '#8B1737', // bordeaux principale, ricco e moderno
+        secondary: '#6D2932', // bordeaux più scuro, quasi marrone/rosso vino
+        tertiary: '#E6C1CA', // rosa cipria chiaro (opzionale), o lascia il grigio
+        border: '#3B2025', // marrone scurissimo, quasi antracite
+        background: '#fff9f6', // bianco caldo (puoi usare anche #f8f4f1 per effetto carta)
       },
       animation: {
         vote: 'vote 1s ease-in-out',

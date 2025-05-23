@@ -1,0 +1,62 @@
+[
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Olio Extravergine Bio",
+    "description": "Olio extravergine d'oliva 100% italiano, biologico e spremuto a freddo."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Vino Rosso Riserva",
+    "description": "Vino rosso corposo e raffinato, affinato in botti di rovere."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Aceto Balsamico",
+    "description": "Aceto balsamico di Modena IGP, invecchiato 8 anni."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Miele di Castagno",
+    "description": "Miele di castagno puro, dal gusto intenso e aromatico."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Pasta Artigianale",
+    "description": "Pasta trafilata al bronzo, prodotta con grano duro italiano."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Sugo al Pomodoro",
+    "description": "Sugo fresco con pomodori italiani, basilico e olio EVO."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Biscotti Secchi",
+    "description": "Biscotti artigianali secchi, perfetti per la colazione."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Caffè Arabica",
+    "description": "Caffè 100% Arabica, tostatura lenta per un aroma unico."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Formaggio Pecorino",
+    "description": "Formaggio pecorino stagionato, prodotto in Toscana."
+  },
+  {
+    "image": "olio.jpg",
+    "imagepng": "olio.png",
+    "title": "Cioccolato Fondente",
+    "description": "Cioccolato fondente 70%, lavorazione artigianale."
+  }
+]
