@@ -11,10 +11,6 @@
     {
       "name": "Where we are",
       "href": "features"
-    },
-    {
-      "name": "About us",
-      "href": "about"
     }
   ],
   "mainHero": {
@@ -25,22 +21,22 @@
   },
   "product": {
     "title": "Our products",
-    "subtitle": "A selection of our products",
+    "subtitle": "Signature Flavors",
     "items": [
       {
-        "title": "Organic and local products",
-        "description": "We select only certified organic products for you, fresh and genuine: from bread to cheese, from fruit to cured meats.",
-        "img": "/assets/images/prodotti-biologici.jpg"
+        "title": "Organic Products",
+        "description": "At our store, you’ll find only the finest certified organic products, selected with care and passion. Our range includes Italian packaged foods made with natural, traceable, and sustainable ingredients. Perfect for those who value quality, authentic flavor, and a healthier lifestyle.",
+        "img": "/assets/images/leone.jpg"
       },
       {
-        "title": "Fine wines and spirits",
-        "description": "A wide selection of Italian wines, craft liqueurs and spirits for your special occasions.",
-        "img": "/assets/images/vini.jpg"
+        "title": "Wines and Spirits",
+        "description": "A journey through the flavors of Italy… and beyond. Our wine cellar offers a wide selection of local wines, carefully chosen from small and medium Italian wineries, alongside rare international labels and high-end artisanal spirits from around the world. Ideal for enthusiasts, collectors, or anyone looking for a truly special gift.",
+        "img": "/assets/images/selezioneVini.jpg"
       },
       {
-        "title": "Teas, herbal infusions and handmade sweets",
-        "description": "Discover our range of premium teas, aromatic herbal infusions, handmade chocolate and artisanal candies.",
-        "img": "/assets/images/infusi-dolci.jpg"
+        "title": "Teas and Herbal Infusions",
+        "description": "A moment of relaxation for every part of your day. Our selection of teas, infusions, and herbal blends is one of the most diverse in Rome: from classic black teas to delicate Japanese green teas, from wellness herbal blends to fragrant fruity and floral varieties. A choice for every taste, every season, and every need.",
+        "img": "/assets/images/tisane.jpg"
       }
     ]
   },
@@ -50,12 +46,16 @@
     "description": "You can find us at Via dei Giubbonari 55, just steps from Campo de' Fiori. We are easily reachable on foot or by public transport. Come and enjoy a true Italian taste and tradition experience!",
     "items": [
       {
-        "name": "Address",
+        "name": "Indirizzo",
         "description": "Via dei Giubbonari, 55 – 00186 Rome"
       },
       {
-        "name": "Opening hours",
-        "description": "Monday–Saturday: 9:00–20:00. Closed on Sundays."
+        "name": "Orari di apertura",
+        "description": "Monday-Sunday: 11:00–21:00."
+      },
+      {
+        "name": "numero di telefono",
+        "description": "+39 066861759"
       }
     ]
   },
@@ -65,17 +65,13 @@
         "name": "About us",
         "href": "#",
         "content": "Drogheria Conti was born from the passion of Alessandro and Sandra for good food and genuine quality. For over 90 years, we have been a landmark in Rome for those who seek authentic products and a warm, welcoming service."
-      },
-      {
-        "name": "Contact",
-        "href": "#contact",
-        "content": "Phone: +39 06 1234567\nEmail: info@drogheriaconti.it"
       }
     ],
     "socialMedia": {
-      "github": "https://github.com/issaafalkattan",
-      "twitter": "https://twitter.com/issaafkattan",
-      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+      "instagram": "https://www.instagram.com/alimentari.conti?igsh=Z3F0eWphbmRoMDRo"
+    },
+    "developedBy": {
+      "name": "Developed by Federico Ribaldi \n Powered by React"
     }
   }
 }

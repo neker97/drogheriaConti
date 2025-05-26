@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import config from '../config/index.json';
+import config from "../config/index.json";
 
 const MainHeroImage = () => {
   const { mainHero } = config;
@@ -9,7 +9,7 @@ const MainHeroImage = () => {
       <img
         className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
         src={mainHero.img}
-        alt="happy team image"
+        alt="Drogheria Conti, alimentari tipici a Campo de' Fiori Roma"
       />
     </div>
   );

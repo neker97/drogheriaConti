@@ -52,13 +52,13 @@ class Wave {
         /rgba?\(([^)]+)\)/,
         (match, contents) => {
           // Se è già rgba, sostituisci l'alpha
-          const colorParts = contents.split(',');
+          const colorParts = contents.split(",");
           if (colorParts.length === 4) {
             colorParts[3] = ` ${alpha}`;
-            return `rgba(${colorParts.join(',')})`;
+            return `rgba(${colorParts.join(",")})`;
           }
           if (colorParts.length === 3) {
-            return `rgba(${colorParts.join(',')}, ${alpha})`;
+            return `rgba(${colorParts.join(",")}, ${alpha})`;
           }
           return match;
         }

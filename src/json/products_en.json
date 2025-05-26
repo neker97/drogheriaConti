@@ -1,0 +1,86 @@
+[
+  {
+    "image": "Amareetti virginia.png",
+    "imagepng": "Amareetti virginia.png",
+    "title": "Virginia Amaretti",
+    "description": "Artisanal Virginia amaretti, traditional Italian dry cookies with a delicate taste."
+  },
+  {
+    "image": "Amarone della valpolicella.png",
+    "imagepng": "Amarone della valpolicella.png",
+    "title": "Amarone della Valpolicella Wine",
+    "description": "Amarone della Valpolicella DOCG red wine, full-bodied and well-structured."
+  },
+  {
+    "image": "Babbi.png",
+    "imagepng": "Babbi.png",
+    "title": "Babbi Spread",
+    "description": "Babbi spread cream, a high-quality sweet specialty from Emilia-Romagna."
+  },
+  {
+    "image": "Caramelle Leone.png",
+    "imagepng": "Caramelle Leone.png",
+    "title": "Leone Candies",
+    "description": "Leone candies in a vintage tin, classic Italian sweets in assorted flavors."
+  },
+  {
+    "image": "Ciambelline al vino.png",
+    "imagepng": "Ciambelline al vino.png",
+    "title": "Wine Cookies",
+    "description": "Rustic red wine cookies, typical of traditional Lazio cuisine."
+  },
+  {
+    "image": "Fettuccine campofilone.png",
+    "imagepng": "Fettuccine campofilone.png",
+    "title": "Campofilone Fettuccine",
+    "description": "Campofilone IGP egg fettuccine, handcrafted pasta from the Marche region."
+  },
+  {
+    "image": "Foglie di torrone Flamigni.png",
+    "imagepng": "Foglie di torrone Flamigni.png",
+    "title": "Flamigni Torrone Leaves",
+    "description": "Flamigni torrone leaves, thin and crunchy almond and honey nougat sheets."
+  },
+  {
+    "image": "Galliano.png",
+    "imagepng": "Galliano.png",
+    "title": "Galliano Liquor",
+    "description": "Galliano liqueur, sweet and spiced Italian herbal digestive."
+  },
+  {
+    "image": "limoncello IL Convento.png",
+    "imagepng": "limoncello IL Convento.png",
+    "title": "Il Convento Limoncello",
+    "description": "Il Convento limoncello, artisanal lemon liqueur from the Amalfi Coast."
+  },
+  {
+    "image": "Marconi 42 Gin Poli.png",
+    "imagepng": "Marconi 42 Gin Poli.png",
+    "title": "Marconi 42 Gin Poli",
+    "description": "Marconi 42 Poli gin, Italian distilled spirit with alpine botanicals."
+  },
+  {
+    "image": "Marmellata di fragole Agrimontana.png",
+    "imagepng": "Marmellata di fragole Agrimontana.png",
+    "title": "Agrimontana Strawberry Jam",
+    "description": "Agrimontana strawberry jam, extra fruit preserve made with selected strawberries."
+  },
+  {
+    "image": "Marmellata di mirtillo Luxardo.png",
+    "imagepng": "Marmellata di mirtillo Luxardo.png",
+    "title": "Luxardo Blueberry Jam",
+    "description": "Luxardo blueberry jam, rich and smooth black blueberry preserve."
+  },
+  {
+    "image": "Miele Le Querce con frutta secca.png",
+    "imagepng": "Miele Le Querce con frutta secca.png",
+    "title": "Le Querce Honey with Dried Fruits",
+    "description": "Le Querce wildflower honey with hazelnuts, almonds, and walnuts."
+  },
+  {
+    "image": "Risotto al tartufo bianco.png",
+    "imagepng": "Risotto al tartufo bianco.png",
+    "title": "White Truffle Risotto",
+    "description": "Gourmet white truffle risotto, prepared with rice and truffle flakes."
+  }
+]

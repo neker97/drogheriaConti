@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
-import en from '../config/index.en.json';
-import it from '../config/index.it.json';
+import en from "../config/index.en.json";
+import it from "../config/index.it.json";
 
-type LangType = 'en' | 'it';
+type LangType = "en" | "it";
 const LANGUAGES = { en, it };
 
 interface LanguageContextType {
@@ -16,7 +16,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 );
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<LangType>('it'); // default italiano
+  const [lang, setLang] = useState<LangType>("it"); // default italiano
   const config = LANGUAGES[lang];
   return (
     <LanguageContext.Provider value={{ lang, setLang, config }}>
@@ -27,6 +27,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext);
   if (!context)
-    throw new Error('useLanguage must be used within LanguageProvider');
+    throw new Error("useLanguage must be used within LanguageProvider");
   return context;
 }

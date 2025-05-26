@@ -11,10 +11,6 @@
     {
       "name": "Dove siamo",
       "href": "features"
-    },
-    {
-      "name": "Chi siamo",
-      "href": "about"
     }
   ],
   "mainHero": {
@@ -25,22 +21,22 @@
   },
   "product": {
     "title": "I nostri prodotti",
-    "subtitle": "Una selezione dei nostri prodotti",
+    "subtitle": "Sapori Unici",
     "items": [
       {
-        "title": "Prodotti biologici e a km 0",
-        "description": "Selezioniamo per voi solo prodotti biologici certificati, freschi e genuini, dal pane ai formaggi, dalla frutta ai salumi.",
-        "img": "/assets/images/prodotti-biologici.jpg"
+        "title": "Prodotti Biologici",
+        "description": "Da noi trovi solo prodotti selezionati e certificati, frutto della passione per il buono e per il sano. Scopri la nostra gamma di alimenti confezionati biologici, realizzati in Italia con ingredienti naturali, tracciabili e sostenibili. Perfetti per chi cerca qualità, gusto e rispetto per l’ambiente.",
+        "img": "/assets/images/leone.jpg"
       },
       {
         "title": "Vini e distillati d'eccellenza",
-        "description": "Ampia selezione di vini italiani, liquori e distillati artigianali per accompagnare ogni occasione speciale.",
-        "img": "/assets/images/vini.jpg"
+        "description": "Un viaggio tra i sapori delle terre italiane… e non solo. La nostra cantina offre una vasta selezione di vini locali accuratamente scelti tra piccole e medie aziende vinicole del territorio, accanto a etichette internazionali rare e distillati di pregio provenienti da tutto il mondo. Ideali per appassionati, intenditori o per chi cerca un regalo davvero speciale.",
+        "img": "/assets/images/selezioneVini.jpg"
       },
       {
         "title": "Tè, infusi e dolci artigianali",
-        "description": "Scoprite la nostra scelta di tè pregiati, tisane aromatiche, cioccolata e caramelle fatte a mano.",
-        "img": "/assets/images/infusi-dolci.jpg"
+        "description": "Un angolo di relax per ogni momento della giornata. La nostra collezione di tè, infusi e tisane è tra le più varie di Roma: dalle miscele classiche ai tè verdi giapponesi, dalle tisane funzionali alle profumate varianti fruttate e floreali. Una proposta per ogni palato, ogni stagione e ogni esigenza.",
+        "img": "/assets/images/tisane.jpg"
       }
     ]
   },
@@ -51,11 +47,15 @@
     "items": [
       {
         "name": "Indirizzo",
-        "description": "Via dei Giubbonari, 55 – 00186 Roma"
+        "description": "Via dei Giubbonari, 55 - 00186 Roma"
       },
       {
         "name": "Orari di apertura",
-        "description": "Lunedì–Sabato: 9:00–20:00. Domenica chiuso."
+        "description": "Lunedì-Domenica: 11:00-21:00."
+      },
+      {
+        "name": "numero di telefono",
+        "description": "+39 066861759"
       }
     ]
   },
@@ -65,17 +65,13 @@
         "name": "Chi siamo",
         "href": "#",
         "content": "Drogheria Conti nasce dalla passione di Alessandro e Sandra per la buona tavola e la qualità. Da oltre 90 anni siamo un punto di riferimento a Roma per chi cerca prodotti genuini e un servizio accogliente e familiare."
-      },
-      {
-        "name": "Contatti",
-        "href": "#contatti",
-        "content": "Telefono: +39 06 1234567\nEmail: info@drogheriaconti.it"
       }
     ],
     "socialMedia": {
-      "github": "https://github.com/issaafalkattan",
-      "twitter": "https://twitter.com/issaafkattan",
-      "linkedin": "https://www.linkedin.com/in/issaaf-kattan/"
+      "instagram": "https://www.instagram.com/alimentari.conti?igsh=Z3F0eWphbmRoMDRo"
+    },
+    "developedBy": {
+      "name": "Sviluppato da Federico Ribaldi \n Powered by React"
     }
   }
 }

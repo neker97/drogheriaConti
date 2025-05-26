@@ -1,25 +1,28 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import products from '../json/products.json';
+import products_en from '../json/products_en.json';
+import products_it from '../json/products_it.json';
 import stylesCarousel from '../styles/CardCarousel.module.css';
 import { useLanguage } from '../utils/LanguageContext';
 import Card from './Card';
 import Divider from './Divider';
 
 const Product = () => {
-  const { config } = useLanguage();
+  const { config, lang } = useLanguage();
   const { product } = config;
-  const [firstItem, secondItem] = product.items;
+  const [firstItem, secondItem, thirdItem] = product.items;
 
   // Prendi il titolo da products.subtitle (IT o EN)
   const words = product.subtitle.split(' ');
   // parole da evidenziare
-  const highlightWords = ['selezione', 'selection'];
+  const highlightWords = ['unici', 'signature'];
 
   // Carosello logica:
   const scrollRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const products = lang === 'it' ? products_it : products_en;
 
   // Crea array circolare: clona gli elementi per l'effetto infinito
   const extendedProducts = [
@@ -226,9 +229,6 @@ const Product = () => {
           </div>
         </div>
       </div>
-
-      <Divider />
-
       {/* SEZIONE PRODOTTI */}
       <div className="container max-w-5xl mx-auto px-8">
         <h1 className="w-full my-2 text-5xl font-bold leading-tight text-center text-primary">
@@ -253,7 +253,7 @@ const Product = () => {
           </div>
           <div className="w-full sm:w-1/2 p-6">
             <img
-              className="h-6/6"
+              className="rounded-2xl w-full h-auto object-cover"
               src={firstItem?.img}
               alt={firstItem?.title}
             />
@@ -263,7 +263,7 @@ const Product = () => {
         <div className="flex flex-wrap flex-col-reverse sm:flex-row">
           <div className="w-full sm:w-1/2 p-6">
             <img
-              className="h-6/6"
+              className="rounded-2xl w-full h-auto object-cover"
               src={secondItem?.img}
               alt={secondItem?.title}
             />
@@ -275,6 +275,21 @@ const Product = () => {
               </h3>
               <p className="text-gray-600 mb-8">{secondItem?.description}</p>
             </div>
+          </div>
+        </div>
+        <div className="flex flex-wrap">
+          <div className="w-full sm:w-1/2 p-6 mt-20">
+            <h3 className="text-3xl text-gray-800 font-bold leading-none mb-3">
+              {thirdItem?.title}
+            </h3>
+            <p className="text-gray-600">{thirdItem?.description}</p>
+          </div>
+          <div className="w-full sm:w-1/2 p-6">
+            <img
+              className="rounded-2xl w-full h-auto object-cover"
+              src={thirdItem?.img}
+              alt={thirdItem?.title}
+            />
           </div>
         </div>
       </div>

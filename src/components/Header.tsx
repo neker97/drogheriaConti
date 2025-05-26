@@ -1,10 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Link } from 'react-scroll';
+import { Popover, Transition } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Head from "next/head";
+import { Link } from "react-scroll";
 
-import { useLanguage } from '../utils/LanguageContext';
+import { useLanguage } from "../utils/LanguageContext";
 
 const Menu = () => {
   const { config, lang, setLang } = useLanguage();
@@ -12,14 +13,48 @@ const Menu = () => {
   const { navigation, company } = config;
   const { name: companyName, logo } = company;
 
-  const flagSrc =
-    lang === 'it' ? '/assets/images/ita.png' : '/assets/images/eng.png';
-  const altFlag = lang === 'it' ? 'Cambia in inglese' : 'Switch to Italian';
+  const meta = {
+    it: {
+      title: "Drogheria Conti",
+      description:
+        "Drogheria Conti: alimentari storico a Campo de' Fiori. Prodotti tipici, vini, specialità alimentari e servizio cordiale nel cuore di Roma.",
+    },
+    en: {
+      title: "Drogheria Conti",
+      description:
+        "Drogheria Conti: historic deli shop in Campo de' Fiori, Rome. Typical Italian food, wines, and specialties. Visit us in the heart of Rome.",
+    },
+  };
 
-  const toggleLang = () => setLang(lang === 'it' ? 'en' : 'it');
+  const flagSrc =
+    lang === "it" ? "/assets/images/ita.png" : "/assets/images/eng.png";
+  const altFlag = lang === "it" ? "Cambia in inglese" : "Switch to Italian";
+
+  const toggleLang = () => setLang(lang === "it" ? "en" : "it");
 
   return (
     <>
+      <Head>
+        <title>{meta[lang]?.title || meta.it.title}</title>
+        <meta
+          name="description"
+          content="Drogheria Conti,alimentari nel cuore di Roma. Specialità gastronomiche, vini selezionati, prodotti tipici italiani, servizio cordiale in Via dei Giubbonari 55. Campo de fiori"
+        />
+        <meta
+          property="og:title"
+          content="Drogheria Conti | Prodotti tipici e vini a Roma"
+        />
+        <meta
+          property="og:description"
+          content="Scopri la nostra selezione di prodotti tipici, vini e specialità alimentari in centro a Roma."
+        />
+        <meta
+          property="og:image"
+          content="https://drogheriaconti.it/assets/images/happyTeam.jpg"
+        />
+        <meta property="og:url" content="https://drogheriaconti.it/" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       <svg
         className={`hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-background transform translate-x-1/2`}
         fill="currentColor"
@@ -47,13 +82,13 @@ const Menu = () => {
             >
               <img
                 src={flagSrc}
-                alt={lang === 'it' ? 'Bandiera Italia' : 'UK Flag'}
+                alt={lang === "it" ? "Bandiera Italia" : "UK Flag"}
                 style={{
                   width: 36,
                   height: 36,
-                  borderRadius: '50%',
-                  objectFit: 'cover',
-                  boxShadow: '0 1px 4px rgba(0,0,0,0.12)',
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
                 }}
               />
             </button>
@@ -69,7 +104,7 @@ const Menu = () => {
                     className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
                   >
                     <span className="sr-only">Open main menu</span>
-                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
@@ -88,12 +123,6 @@ const Menu = () => {
                   {item.name}
                 </Link>
               ))}
-              <a
-                href="#"
-                className={`font-medium text-primary hover:text-secondary`}
-              >
-                Call to action
-              </a>
             </div>
           </nav>
         </div>
@@ -123,7 +152,7 @@ const Menu = () => {
                     className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
                   >
                     <span className="sr-only">Close main menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
                 </div>
               </div>
