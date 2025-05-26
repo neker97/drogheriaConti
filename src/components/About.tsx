@@ -36,7 +36,7 @@ const About = () => {
           ))}
         </div>
         <div className="flex items-center gap-x-8 mt-6 h-8">
-         <a
+          <a
             aria-label="Instagram"
             href={socialMedia.instagram}
             target="_blank"

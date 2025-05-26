@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from 'react';
 
-import { Popover, Transition } from "@headlessui/react";
+import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Head from "next/head";
-import { Link } from "react-scroll";
+import Head from 'next/head';
+import { Link } from 'react-scroll';
 
-import { useLanguage } from "../utils/LanguageContext";
+import { useLanguage } from '../utils/LanguageContext';
 
 const Menu = () => {
   const { config, lang, setLang } = useLanguage();
@@ -15,22 +15,22 @@ const Menu = () => {
 
   const meta = {
     it: {
-      title: "Drogheria Conti",
+      title: 'Drogheria Conti',
       description:
         "Drogheria Conti: alimentari storico a Campo de' Fiori. Prodotti tipici, vini, specialità alimentari e servizio cordiale nel cuore di Roma.",
     },
     en: {
-      title: "Drogheria Conti",
+      title: 'Drogheria Conti',
       description:
         "Drogheria Conti: historic deli shop in Campo de' Fiori, Rome. Typical Italian food, wines, and specialties. Visit us in the heart of Rome.",
     },
   };
 
   const flagSrc =
-    lang === "it" ? "/assets/images/ita.png" : "/assets/images/eng.png";
-  const altFlag = lang === "it" ? "Cambia in inglese" : "Switch to Italian";
+    lang === 'it' ? '/assets/images/ita.png' : '/assets/images/eng.png';
+  const altFlag = lang === 'it' ? 'Cambia in inglese' : 'Switch to Italian';
 
-  const toggleLang = () => setLang(lang === "it" ? "en" : "it");
+  const toggleLang = () => setLang(lang === 'it' ? 'en' : 'it');
 
   return (
     <>
@@ -56,7 +56,7 @@ const Menu = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <svg
-        className={`hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-background transform translate-x-1/2`}
+        className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-background transform translate-x-1/2"
         fill="currentColor"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
@@ -82,13 +82,13 @@ const Menu = () => {
             >
               <img
                 src={flagSrc}
-                alt={lang === "it" ? "Bandiera Italia" : "UK Flag"}
+                alt={lang === 'it' ? 'Bandiera Italia' : 'UK Flag'}
                 style={{
                   width: 36,
                   height: 36,
-                  borderRadius: "50%",
-                  objectFit: "cover",
-                  boxShadow: "0 1px 4px rgba(0,0,0,0.12)",
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  boxShadow: '0 1px 4px rgba(0,0,0,0.12)',
                 }}
               />
             </button>
@@ -100,9 +100,7 @@ const Menu = () => {
                 </a>
                 {/* Bottone sferico, padding destra */}
                 <div className="-mr-2 flex items-center md:hidden">
-                  <Popover.Button
-                    className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
-                  >
+                  <Popover.Button className="bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                     <span className="sr-only">Open main menu</span>
                     <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -112,9 +110,9 @@ const Menu = () => {
             <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
               {navigation.map((item) => (
                 <Link
-                  spy={true}
+                  spy
                   active="active"
-                  smooth={true}
+                  smooth
                   duration={1000}
                   key={item.name}
                   to={item.href}
@@ -140,17 +138,13 @@ const Menu = () => {
             focus
             className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
           >
-            <div
-              className={`rounded-lg shadow-md bg-background ring-1 ring-black ring-opacity-5 overflow-hidden`}
-            >
+            <div className="rounded-lg shadow-md bg-background ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div className="px-5 pt-4 flex items-center justify-between">
                 <div>
                   <img className="h-8 w-auto" src={logo} alt="" />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button
-                    className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
-                  >
+                  <Popover.Button className="bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary">
                     <span className="sr-only">Close main menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -159,9 +153,9 @@ const Menu = () => {
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navigation.map((item) => (
                   <Link
-                    spy={true}
+                    spy
                     active="active"
-                    smooth={true}
+                    smooth
                     duration={1000}
                     key={item.name}
                     to={item.href}

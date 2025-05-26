@@ -1,5 +1,7 @@
-import { useRouter } from "next/router";
-import React from "react";
+import React from 'react';
+
+import { useRouter } from 'next/router';
+
 export default function PrivacyPolicyIt() {
   const router = useRouter();
 
@@ -10,14 +12,18 @@ export default function PrivacyPolicyIt() {
         Questo sito web non raccoglie dati personali degli utenti e non utilizza
         cookie di profilazione o tecnologie di tracciamento.
       </p>
+
       <h2 className="text-xl font-semibold mt-4 mb-2">
         Servizi di terze parti
       </h2>
       <ul className="list-disc ml-6">
         <li>
-          <strong>Google Maps:</strong> Nella sezione "Dove ci trovi" è
+          <strong>Google Maps:</strong>
+          <br />
+          Nella sezione &quot;Dove ci trovi&quot; è
+          <br />
           incorporata una mappa interattiva tramite Google Maps. Google può
-          raccogliere dati secondo la propria{" "}
+          raccogliere dati secondo la propria{' '}
           <a
             href="https://policies.google.com/privacy"
             className="underline"
@@ -31,10 +37,12 @@ export default function PrivacyPolicyIt() {
         <li>
           <strong>Instagram:</strong> Il sito contiene un collegamento al
           profilo Instagram del negozio. Nessun dato viene raccolto dal sito;
-          l'accesso a Instagram è esterno e regolato dalle politiche di
+          <br />
+          l&apos;accesso a Instagram è esterno e regolato dalle politiche di
           Instagram.
         </li>
       </ul>
+
       <h2 className="text-xl font-semibold mt-4 mb-2">Contatti</h2>
       <p>
         Per qualsiasi informazione, richiesta o segnalazione, puoi scrivere a:
@@ -49,7 +57,7 @@ export default function PrivacyPolicyIt() {
       <p>
         Federico Ribaldi
         <br />
-        Email:{" "}
+        Email:{' '}
         <a href="mailto:federico.ribaldi97@gmail.com" className="underline">
           federico.ribaldi97@gmail.com
         </a>
@@ -59,7 +67,7 @@ export default function PrivacyPolicyIt() {
       <div className="mt-8">
         <button
           className="px-4 py-2 bg-primary text-white rounded hover:bg-secondary transition"
-          onClick={() => router.push("/")}
+          onClick={() => router.push('/')}
         >
           Torna alla Home
         </button>

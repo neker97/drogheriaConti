@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from 'react';
 
-import styles from "../styles/Card.module.css";
+import styles from '../styles/Card.module.css';
 
 interface CardProps {
   image: string; // esempio: prodotto1.jpg
@@ -11,7 +11,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ image, imagepng, title, description }) => {
   const [flipped, setFlipped] = useState(false);
-  const [transform, setTransform] = useState("");
+  const [transform, setTransform] = useState('');
   const [showPng, setShowPng] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -19,8 +19,8 @@ const Card: React.FC<CardProps> = ({ image, imagepng, title, description }) => {
   useEffect(() => {
     // Solo lato client
     setIsMobile(
-      typeof window !== "undefined" &&
-        window.matchMedia("(pointer: coarse)").matches
+      typeof window !== 'undefined' &&
+        window.matchMedia('(pointer: coarse)').matches,
     );
   }, []);
 
@@ -38,7 +38,7 @@ const Card: React.FC<CardProps> = ({ image, imagepng, title, description }) => {
   };
 
   const handleMouseLeave = () => {
-    setTransform("rotateY(0deg) rotateX(0deg)");
+    setTransform('rotateY(0deg) rotateX(0deg)');
     setShowPng(false);
   };
 
@@ -68,10 +68,10 @@ const Card: React.FC<CardProps> = ({ image, imagepng, title, description }) => {
       tabIndex={0}
     >
       <div
-        className={`${styles.card} ${flipped ? styles.flipped : ""}`}
+        className={`${styles.card} ${flipped ? styles.flipped : ''}`}
         style={{
           transform,
-          transition: "transform 0.33s cubic-bezier(.25,.8,.25,1)",
+          transition: 'transform 0.33s cubic-bezier(.25,.8,.25,1)',
         }}
       >
         {/* FRONT */}
@@ -82,12 +82,12 @@ const Card: React.FC<CardProps> = ({ image, imagepng, title, description }) => {
             onMouseEnter={handleMouseEnterImg}
             onMouseLeave={handleMouseLeaveImg}
             style={{
-              cursor: isMobile ? "pointer" : "default",
-              position: "relative",
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
+              cursor: isMobile ? 'pointer' : 'default',
+              position: 'relative',
+              width: '100%',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             {/* Immagine di base */}
@@ -100,7 +100,7 @@ const Card: React.FC<CardProps> = ({ image, imagepng, title, description }) => {
             {/* PNG sopra la JPG, appare solo se showPng==true */}
             <img
               className={`${styles.cardImagePng} ${
-                showPng ? styles.cardImagePngActive : ""
+                showPng ? styles.cardImagePngActive : ''
               }`}
               src={`/assets/images/products/${imagepng}`}
               alt={`${title} overlay`}

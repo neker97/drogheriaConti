@@ -107,7 +107,7 @@ const Features = () => {
                 height="100%"
                 className="w-full h-full"
                 style={{ border: 0, minHeight: "250px" }}
-                allowFullScreen={true}
+                allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />

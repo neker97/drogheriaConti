@@ -13,7 +13,7 @@ class Wave {
     context: CanvasRenderingContext2D,
     width: number,
     height: number,
-    frequency: number
+    frequency: number,
   ): void => {
     context.save();
 
@@ -27,13 +27,13 @@ class Wave {
       // "Pennellata" offsettata
       for (let i = 0; i < width; i++) {
         const wave1 = Math.sin(
-          i * (this.waveLength[0] ?? 0) - frequency + layer * 0.12
+          i * (this.waveLength[0] ?? 0) - frequency + layer * 0.12,
         );
         const wave2 = Math.sin(
-          i * (this.waveLength[1] ?? 0) - frequency + layer * 0.16
+          i * (this.waveLength[1] ?? 0) - frequency + layer * 0.16,
         );
         const wave3 = Math.sin(
-          i * (this.waveLength[2] ?? 0) - frequency + layer * 0.21
+          i * (this.waveLength[2] ?? 0) - frequency + layer * 0.21,
         );
 
         // Più "rumoroso" sulle y per l'effetto pennello
@@ -42,7 +42,7 @@ class Wave {
 
         context.lineTo(
           i * 2.5,
-          height - 400 + wave1 * wave2 * wave3 * 190 + layer * 7 + noise
+          height - 400 + wave1 * wave2 * wave3 * 190 + layer * 7 + noise,
         );
       }
 
@@ -52,16 +52,16 @@ class Wave {
         /rgba?\(([^)]+)\)/,
         (match, contents) => {
           // Se è già rgba, sostituisci l'alpha
-          const colorParts = contents.split(",");
+          const colorParts = contents.split(',');
           if (colorParts.length === 4) {
             colorParts[3] = ` ${alpha}`;
-            return `rgba(${colorParts.join(",")})`;
+            return `rgba(${colorParts.join(',')})`;
           }
           if (colorParts.length === 3) {
-            return `rgba(${colorParts.join(",")}, ${alpha})`;
+            return `rgba(${colorParts.join(',')}, ${alpha})`;
           }
           return match;
-        }
+        },
       );
       context.fill();
       context.closePath();

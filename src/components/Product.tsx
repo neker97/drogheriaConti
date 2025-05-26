@@ -1,11 +1,11 @@
 import React, { useRef, useEffect, useState } from 'react';
 
-import products_en from '../json/products_en.json';
-import products_it from '../json/products_it.json';
-import stylesCarousel from '../styles/CardCarousel.module.css';
-import { useLanguage } from '../utils/LanguageContext';
 import Card from './Card';
 import Divider from './Divider';
+import productsEn from '../json/productsEn.json';
+import productsIt from '../json/productsIt.json';
+import stylesCarousel from '../styles/CardCarousel.module.css';
+import { useLanguage } from '../utils/LanguageContext';
 
 const Product = () => {
   const { config, lang } = useLanguage();
@@ -22,7 +22,7 @@ const Product = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const products = lang === 'it' ? products_it : products_en;
+  const products = lang === 'it' ? productsIt : productsEn;
 
   // Crea array circolare: clona gli elementi per l'effetto infinito
   const extendedProducts = [
@@ -181,7 +181,7 @@ const Product = () => {
               <span key={idx} className="text-border">
                 {word}{' '}
               </span>
-            )
+            ),
           )}
         </h1>
       </div>

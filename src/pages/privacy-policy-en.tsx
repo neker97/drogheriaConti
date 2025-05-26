@@ -1,6 +1,6 @@
-// pages/privacy-policy-en.jsx
-import React from "react";
-import { useRouter } from "next/router";
+import React from 'react';
+
+import { useRouter } from 'next/router';
 
 export default function PrivacyPolicyEn() {
   const router = useRouter();
@@ -12,12 +12,17 @@ export default function PrivacyPolicyEn() {
         This website does not collect personal data from users and does not use
         profiling cookies or tracking technologies.
       </p>
+
       <h2 className="text-xl font-semibold mt-4 mb-2">Third-party services</h2>
       <ul className="list-disc ml-6">
         <li>
-          <strong>Google Maps:</strong> The "Where to find us" section includes
-          an interactive map via Google Maps. Google may collect data according
-          to its own{" "}
+          <strong>Google Maps:</strong>
+          <br />
+          The &quot;Where to find us&quot; section
+          <br />
+          includes an interactive map via Google Maps.
+          <br />
+          Google may collect data according to its own{' '}
           <a
             href="https://policies.google.com/privacy"
             className="underline"
@@ -29,11 +34,15 @@ export default function PrivacyPolicyEn() {
           . No data is collected directly by the site owner.
         </li>
         <li>
-          <strong>Instagram:</strong> The site contains a link to the store's
-          Instagram profile. No data is collected by the site; access to
-          Instagram is external and regulated by Instagram’s policies.
+          <strong>Instagram:</strong> The store&apos;s Instagram profile.
+          <br />
+          No data is collected by the site;
+          <br />
+          access to Instagram is external and regulated by Instagram&apos;s
+          policies.
         </li>
       </ul>
+
       <h2 className="text-xl font-semibold mt-4 mb-2">Contact</h2>
       <p>
         For any information, requests or notifications, please write to:
@@ -46,7 +55,7 @@ export default function PrivacyPolicyEn() {
       <p>
         Federico Ribaldi
         <br />
-        Email:{" "}
+        Email:{' '}
         <a href="mailto:federico.ribaldi97@gmail.com" className="underline">
           federico.ribaldi97@gmail.com
         </a>
@@ -56,7 +65,7 @@ export default function PrivacyPolicyEn() {
       <div className="mt-8">
         <button
           className="px-4 py-2 bg-primary text-white rounded hover:bg-secondary transition"
-          onClick={() => router.push("/")}
+          onClick={() => router.push('/')}
         >
           Back to Home
         </button>
