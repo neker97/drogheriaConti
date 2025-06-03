@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-prod": "npm run build && npm run export",
+    "build-prod": "next build",
     "start": "next start",
     "export": "next export",
     "clean": "rimraf .next out",
